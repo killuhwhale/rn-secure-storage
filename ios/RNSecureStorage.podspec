@@ -1,6 +1,6 @@
 
 Pod::Spec.new do |s|
-  s.name         = "RNSecureStorage - fork"
+  s.name         = "RNSecureStorage"
   s.version      = "1.0.82"
   s.summary      = "RNSecureStorage - fork ios fix"
   s.description  = <<-DESC
