@@ -1,7 +1,7 @@
 // Type definitions for rn-secure-storage 2.0.7
 // Project: https://github.com/talut/rn-secure-storage
 
-declare module "rn-secure-storage" {
+declare module "killuhwhal3-rn-secure-storage" {
   export enum ACCESSIBLE {
     /**
      * The data in the keychain item cannot be accessed after a restart until the device
