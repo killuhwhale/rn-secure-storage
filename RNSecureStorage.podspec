@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.description  = <<-DESC
                       Secure Storage for React Native (Android & iOS) - forked Killuhwhal3
                      DESC
-    s.homepage     = "https://github.com/talut/rn-secure-storage"
+    s.homepage     = "https://github.com/killuhwhale/rn-secure-storage"
     s.license      = { :type => "MIT", :file => "./LICENSE.md" }
     s.author       = { "Talut Tasgiran" => "info@taluttasgiran.com.tr" }
     s.platform     = :ios, "7.0"
