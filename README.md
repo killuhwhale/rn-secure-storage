@@ -2,6 +2,11 @@
 
 Secure Storage for React Native (Android & iOS) - Keychain & Keystore
 
+Updated fork
+1. Forgot initial issue which caused me to fork to solve. I think it was a type issue w/ typescript
+2. https://github.com/talut/rn-secure-storage/issues/63#issuecomment-977788452
+    - Android complains about security, updated from above suggestion
+
 ## v2.0.8
 - Thanks to [@Merlier](https://github.com/Merlier).
 - Thanks to [@corlissc](https://github.com/corlissc).
@@ -13,7 +18,7 @@ This version still under development. But you can look and try. [v3.0.0-developm
 
 ### Facebook RN blog post about v0.60 and AndroidX support: [https://facebook.github.io/react-native/blog/2019/07/03/version-60](https://facebook.github.io/react-native/blog/2019/07/03/version-60)
 
-**[Go to F.A.Q for more information.](#faq)**  
+**[Go to F.A.Q for more information.](#faq)**
 
 **[Not your main language ? Check out the translations here](#translations)**
 
@@ -129,7 +134,7 @@ console.log(err);
 
 ### Example
 
-You can find the usage example of the package in the example folder. 
+You can find the usage example of the package in the example folder.
 
 ```console
 git clone https://github.com/talut/rn-secure-package
@@ -200,7 +205,7 @@ react-native run-ios/android
 -**How can I support you?**
 -*If you're using my package that's enough for me*
 
-*Note: This package is more improved version of [react-native-secure-key-store](https://github.com/pradeep1991singh/react-native-secure-key-store), RNSecureStorage has "under api 23" support*  
+*Note: This package is more improved version of [react-native-secure-key-store](https://github.com/pradeep1991singh/react-native-secure-key-store), RNSecureStorage has "under api 23" support*
 
 
 ## Thanks

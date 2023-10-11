@@ -3,15 +3,19 @@ package com.taluttasgiran.rnsecurestorage;
 import android.content.SharedPreferences;
 import android.os.Build;
 import androidx.annotation.Nullable;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.IllegalViewOperationException;
-import com.securepreferences.SecurePreferences;
+// import com.securepreferences.SecurePreferences;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -31,7 +35,16 @@ public class RNSecureStorageModule extends ReactContextBaseJavaModule {
         if (useKeystore()) {
             rnKeyStore = new RNKeyStore();
         } else {
-            prefs = new SecurePreferences(getReactApplicationContext(), (String) null, "e4b001df9a082298dd090bb7455c45d92fbd5ddd.xml");
+            // prefs = new SecurePreferences(getReactApplicationContext(), (String) null, "e4b001df9a082298dd090bb7455c45d92fbd5ddd.xml");
+            try {
+                prefs = EncryptedSharedPreferences.create("e4b001df9a082298dd090bb7455c45d92fbd5dda.xml",
+                    MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC),
+                    getReactApplicationContext(),
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM);
+            }catch(GeneralSecurityException|IOException e){
+                ;
+            }
         }
     }
 
